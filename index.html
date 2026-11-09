@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Laporan Keuangan Resmi Tahlil Akbar Ke-XVII Tahun 2026. Transparan, akuntabel, dan amanah untuk warga dan jamaah.">
+    <title>Laporan Keuangan Tahlil Akbar Ke-XVII Tahun 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        },
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        gold: {
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-600 selection:text-white">
+
+    <!-- Top Announcement Banner -->
+    <div class="bg-gradient-to-r from-navy-900 via-emerald-900 to-navy-900 text-gold-400 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-inner">
+        <i class="fa-solid fa-moon mr-2"></i> Transparansi Keuangan Tahlil Akbar Ke-XVII Tahun 2026 • Akuntabel & Amanah
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-emerald-800/40 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-gold-500 to-emerald-600 flex items-center justify-center shadow-md text-navy-950 font-bold text-xl">
+                    <i class="fa-solid fa-mosque"></i>
+                </div>
+                <div>
+                    <h1 class="text-base sm:text-lg font-bold tracking-tight text-white">Tahlil Akbar Ke-XVII</h1>
+                    <p class="text-xs text-emerald-300">Laporan Keuangan Tahun 2026</p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#ringkasan" class="hover:text-gold-400 transition">Ringkasan</a>
+                <a href="#grafik" class="hover:text-gold-400 transition">Grafik</a>
+                <a href="#transaksi" class="hover:text-gold-400 transition">Rincian Transaksi</a>
+                <a href="https://drive.google.com/file/d/1bFhD6-VkfxZZ1NzZz4mX8EZgWpnqOXNh/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold px-4 py-2 rounded-xl transition shadow-md flex items-center gap-2">
+                    <i class="fa-solid fa-file-pdf"></i> Unduh PDF Resmi
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" aria-label="Menu Utama" class="text-white focus:outline-none text-xl p-2">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-950 border-t border-emerald-800/30 px-4 py-4 space-y-3 text-sm">
+            <a href="#ringkasan" class="block hover:text-gold-400 transition py-1">Ringkasan Eksekutif</a>
+            <a href="#grafik" class="block hover:text-gold-400 transition py-1">Grafik Visualisasi</a>
+            <a href="#transaksi" class="block hover:text-gold-400 transition py-1">Rincian Transaksi</a>
+            <a href="https://drive.google.com/file/d/1bFhD6-VkfxZZ1NzZz4mX8EZgWpnqOXNh/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="block text-center bg-gold-500 text-navy-950 font-bold px-4 py-2 rounded-xl shadow mt-2">
+                <i class="fa-solid fa-file-pdf mr-2"></i> Unduh PDF Resmi
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-navy-950 via-navy-900 to-emerald-950 text-white py-16 sm:py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#eab308_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-800/60 text-emerald-200 border border-emerald-600/40 mb-6 shadow-sm">
+                <i class="fa-solid fa-shield-halved text-gold-400"></i> Transparan, Akuntabel & Amanah
+            </span>
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4">
+                Laporan Keuangan <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-amber-200">Tahlil Akbar Ke-XVII</span>
+            </h2>
+            <p class="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Pertanggungjawaban keuangan kegiatan Tahlil Akbar Tahun 2026 secara terbuka untuk seluruh jamaah dan warga.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#transaksi" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2">
+                    <i class="fa-solid fa-magnifying-glass"></i> Cari Transaksi
+                </a>
+                <a href="https://drive.google.com/file/d/1bFhD6-VkfxZZ1NzZz4mX8EZgWpnqOXNh/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="bg-gold-500 hover:bg-gold-600 text-navy-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2">
+                    <i class="fa-solid fa-download"></i> Unduh Dokumen PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+        <!-- 1. Ringkasan Eksekutif (Stats Cards) -->
+        <section id="ringkasan" class="scroll-mt-28">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+                <div>
+                    <span class="text-emerald-700 font-bold uppercase tracking-wider text-xs bg-emerald-100 px-3 py-1 rounded-full">Ringkasan Eksekutif</span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-navy-900 mt-2">Rekapitulasi Keuangan Keseluruhan</h3>
+                </div>
+                <p class="text-slate-500 text-sm mt-2 md:mt-0">Data resmi per Tahun 2026</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card Pemasukan -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 relative overflow-hidden group hover:shadow-xl transition">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-full -mr-10 -mt-10 group-hover:scale-110 transition duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                        <p class="text-sm font-medium text-slate-500">Total Pemasukan</p>
+                        <h4 class="text-2xl sm:text-3xl font-extrabold text-navy-900 mt-1">Rp 83.364.150</h4>
+                        <p class="text-xs text-emerald-600 font-semibold mt-3 flex items-center gap-1">
+                            <i class="fa-solid fa-circle-check"></i> 7 Sumber Pemasukan
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Pengeluaran -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 relative overflow-hidden group hover:shadow-xl transition">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-full -mr-10 -mt-10 group-hover:scale-110 transition duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-arrow-trend-down"></i>
+                        </div>
+                        <p class="text-sm font-medium text-slate-500">Total Pengeluaran</p>
+                        <h4 class="text-2xl sm:text-3xl font-extrabold text-navy-900 mt-1">Rp 82.161.500</h4>
+                        <p class="text-xs text-rose-600 font-semibold mt-3 flex items-center gap-1">
+                            <i class="fa-solid fa-file-invoice-dollar"></i> 5 Kategori Pengeluaran
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Saldo Akhir -->
+                <div class="bg-gradient-to-br from-navy-900 to-emerald-900 text-white rounded-2xl p-6 shadow-md relative overflow-hidden group hover:shadow-xl transition">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full -mr-10 -mt-10 group-hover:scale-110 transition duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500 text-navy-950 flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <p class="text-sm font-medium text-emerald-200">Saldo Akhir</p>
+                        <h4 class="text-2xl sm:text-3xl font-extrabold text-gold-400 mt-1">Rp 1.202.650</h4>
+                        <p class="text-xs text-emerald-200 font-semibold mt-3 flex items-center gap-1">
+                            <i class="fa-solid fa-shield-heart"></i> Kas Sisa Aman & Transparan
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Grafik Visualisasi Interaktif (Chart.js) -->
+        <section id="grafik" class="scroll-mt-28">
+            <div class="mb-8">
+                <span class="text-emerald-700 font-bold uppercase tracking-wider text-xs bg-emerald-100 px-3 py-1 rounded-full">Visualisasi Data</span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-navy-900 mt-2">Grafik Komposisi Keuangan</h3>
+                <p class="text-slate-500 text-sm mt-1">Rincian proporsi pemasukan dan pengeluaran Tahlil Akbar Ke-XVII</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Grafik Pemasukan -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100">
+                    <h4 class="text-lg font-bold text-navy-900 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie text-emerald-600"></i> Komposisi Pemasukan
+                    </h4>
+                    <div class="relative h-72 sm:h-80 flex items-center justify-center">
+                        <canvas id="pemasukanChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Grafik Pengeluaran -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100">
+                    <h4 class="text-lg font-bold text-navy-900 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie text-rose-600"></i> Komposisi Pengeluaran
+                    </h4>
+                    <div class="relative h-72 sm:h-80 flex items-center justify-center">
+                        <canvas id="pengeluaranChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Tabel Rincian Transaksi Interaktif (Search & Filter) -->
+        <section id="transaksi" class="scroll-mt-28">
+            <div class="mb-8">
+                <span class="text-emerald-700 font-bold uppercase tracking-wider text-xs bg-emerald-100 px-3 py-1 rounded-full">Rincian Transaksi</span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-navy-900 mt-2">Daftar Rekapitulasi & Kategori</h3>
+                <p class="text-slate-500 text-sm mt-1">Gunakan kolom pencarian atau filter untuk meninjau detail pos anggaran.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden">
+                <!-- Search and Filter Bar -->
+                <div class="p-4 sm:p-6 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row gap-4 justify-between items-center">
+                    <!-- Search Bar -->
+                    <div class="relative w-full sm:w-96">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cari kategori atau uraian transaksi..." class="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-emerald-600 shadow-sm transition">
+                    </div>
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+                        <button onclick="filterType('all')" id="btn-all" class="filter-btn active-filter px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-sm transition">Semua</button>
+                        <button onclick="filterType('Pemasukan')" id="btn-pemasukan" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 transition">Pemasukan</button>
+                        <button onclick="filterType('Pengeluaran')" id="btn-pengeluaran" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 border border-slate-300 hover:bg-slate-100 transition">Pengeluaran</button>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse" id="transactionTable">
+                        <thead>
+                            <tr class="bg-navy-900 text-white text-xs sm:text-sm uppercase tracking-wider">
+                                <th class="py-4 px-6 font-semibold">No</th>
+                                <th class="py-4 px-6 font-semibold">Jenis</th>
+                                <th class="py-4 px-6 font-semibold">Kategori Uraian</th>
+                                <th class="py-4 px-6 font-semibold text-right">Jumlah (Rp)</th>
+                                <th class="py-4 px-6 font-semibold text-center">Persentase</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-sm">
+                            <tr class="hover:bg-slate-50 transition" data-type="Pemasukan" data-search="dana arwahan warga rt pemasukan">
+                                <td class="py-4 px-6 font-medium text-slate-600">1</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800">Pemasukan</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Dana Arwahan Warga (RT)</td>
+                                <td class="py-4 px-6 text-right font-bold text-emerald-700">Rp 25.100.000</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">30,11%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition" data-type="Pemasukan" data-search="sumbangan amplop putih pemasukan">
+                                <td class="py-4 px-6 font-medium text-slate-600">2</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800">Pemasukan</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Sumbangan Amplop Putih</td>
+                                <td class="py-4 px-6 text-right font-bold text-emerald-700">Rp 19.200.000</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">23,03%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition" data-type="Pemasukan" data-search="sponsorship proposal pemasukan">
+                                <td class="py-4 px-6 font-medium text-slate-600">3</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800">Pemasukan</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Sponsorship & Proposal</td>
+                                <td class="py-4 px-6 text-right font-bold text-emerald-700">Rp 16.250.000</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">19,49%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition" data-type="Pemasukan" data-search="saldo kas awal pemasukan">
+                                <td class="py-4 px-6 font-medium text-slate-600">4</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800">Pemasukan</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Saldo Kas Awal</td>
+                                <td class="py-4 px-6 text-right font-bold text-emerald-700">Rp 8.064.150</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">9,67%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition" data-type="Pemasukan" data-search="pemasukan lainnya pemasukan">
+                                <td class="py-4 px-6 font-medium text-slate-600">5</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800">Pemasukan</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Pemasukan Lainnya</td>
+                                <td class="py-4 px-6 text-right font-bold text-emerald-700">Rp 6.700.000</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">8,04%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition" data-type="Pemasukan" data-search="donatur perorangan pemasukan">
+                                <td class="py-4 px-6 font-medium text-slate-600">6</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800">Pemasukan</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Donatur Perorangan</td>
+                                <td class="py-4 px-6 text-right font-bold text-emerald-700">Rp 4.250.000</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">5,10%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition" data-type="Pemasukan" data-search="hasil usaha bazar pemasukan">
+                                <td class="py-4 px-6 font-medium text-slate-600">7</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800">Pemasukan</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Hasil Usaha Bazar</td>
+                                <td class="py-4 px-6 text-right font-bold text-emerald-700">Rp 3.800.000</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">4,56%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition" data-type="Pengeluaran" data-search="konsumsi catering pengeluaran">
+                                <td class="py-4 px-6 font-medium text-slate-600">8</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-100 text-rose-800">Pengeluaran</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Konsumsi & Catering</td>
+                                <td class="py-4 px-6 text-right font-bold text-rose-600">Rp 33.051.500</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">40,23%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition" data-type="Pengeluaran" data-search="perlengkapan sound dekorasi pengeluaran">
+                                <td class="py-4 px-6 font-medium text-slate-600">9</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-100 text-rose-800">Pengeluaran</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Perlengkapan, Sound & Dekorasi</td>
+                                <td class="py-4 px-6 text-right font-bold text-rose-600">Rp 31.110.000</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">37,86%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition" data-type="Pengeluaran" data-search="dokumentasi media pengeluaran">
+                                <td class="py-4 px-6 font-medium text-slate-600">10</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-100 text-rose-800">Pengeluaran</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Dokumentasi & Media</td>
+                                <td class="py-4 px-6 text-right font-bold text-rose-600">Rp 9.300.000</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">11,32%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition" data-type="Pengeluaran" data-search="bisyaroh penceramah pengisi acara pengeluaran">
+                                <td class="py-4 px-6 font-medium text-slate-600">11</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-100 text-rose-800">Pengeluaran</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Bisyaroh Penceramah & Pengisi Acara</td>
+                                <td class="py-4 px-6 text-right font-bold text-rose-600">Rp 8.400.000</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">10,22%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition" data-type="Pengeluaran" data-search="operasional lain lain pengeluaran">
+                                <td class="py-4 px-6 font-medium text-slate-600">12</td>
+                                <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-100 text-rose-800">Pengeluaran</span></td>
+                                <td class="py-4 px-6 font-semibold text-navy-900">Operasional & Lain-lain</td>
+                                <td class="py-4 px-6 text-right font-bold text-rose-600">Rp 300.000</td>
+                                <td class="py-4 px-6 text-center text-slate-600 font-medium">0,37%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Empty state for search -->
+                <div id="noResult" class="hidden p-8 text-center text-slate-500">
+                    <i class="fa-solid fa-face-sad-tear text-3xl mb-2"></i>
+                    <p class="font-semibold">Tidak ada transaksi yang cocok dengan pencarian Anda.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Fitur Unduh File .pdf & Catatan Bendahara -->
+        <section class="bg-gradient-to-r from-emerald-900 via-navy-900 to-emerald-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
+                <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <div class="relative z-10 max-w-3xl">
+                <span class="bg-gold-500 text-navy-950 font-bold text-xs uppercase px-3.5 py-1.5 rounded-full mb-4 inline-block">Catatan Bendahara & Transparansi</span>
+                <h3 class="text-2xl sm:text-4xl font-extrabold mb-4">Unduh Dokumen Laporan Lengkap</h3>
+                <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-8">
+                    Seluruh catatan pembukuan, kuitansi, dan rincian donatur telah diverifikasi oleh Tim Bendahara Tahlil Akbar Ke-XVII Tahun 2026. Anda dapat mengunduh dokumen resmi lengkap berformat PDF melalui tautan di bawah ini.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://drive.google.com/file/d/1bFhD6-VkfxZZ1NzZz4mX8EZgWpnqOXNh/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="bg-gold-500 hover:bg-gold-600 text-navy-950 font-extrabold px-8 py-4 rounded-2xl shadow-lg transition flex items-center gap-3 text-base">
+                        <i class="fa-solid fa-file-pdf text-xl"></i> Unduh File PDF Resmi (Google Drive)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-400 py-12 border-t border-emerald-900/40 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:px-6 lg:px-8 sm:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-500 to-emerald-600 flex items-center justify-center text-navy-950 font-bold text-lg">
+                    <i class="fa-solid fa-mosque"></i>
+                </div>
+                <div>
+                    <p class="text-white font-bold text-sm">Tahlil Akbar Ke-XVII Tahun 2026</p>
+                    <p class="text-xs text-slate-500">Panitia Pelaksana & Bendahara</p>
+                </div>
+            </div>
+            <p class="text-xs text-slate-500 text-center sm:text-right">
+                &copy; 2026 Tahlil Akbar XVII. Dikelola secara Transparan, Amanah, dan Profesional.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu, Search, Filter, and Chart.js -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const ctxPemasukan = document.getElementById('pemasukanChart').getContext('2d');
+        const pemasukanChart = new Chart(ctxPemasukan, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Dana Arwahan Warga (RT)',
+                    'Sumbangan Amplop Putih',
+                    'Sponsorship & Proposal',
+                    'Saldo Kas Awal',
+                    'Pemasukan Lainnya',
+                    'Donatur Perorangan',
+                    'Hasil Usaha Bazar'
+                ],
+                datasets: [{
+                    data: [25100000, 19200000, 16250000, 8064150, 6700000, 4250000, 3800000],
+                    backgroundColor: [
+                        '#059669', '#10b981', '#34d399', '#047857', '#065f46', '#facc15', '#eab308'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            font: { size: 11, family: "'Plus Jakarta Sans', sans-serif" }
+                        }
+                    }
+                }
+            }
+        });
+
+        const ctxPengeluaran = document.getElementById('pengeluaranChart').getContext('2d');
+        const pengeluaranChart = new Chart(ctxPengeluaran, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Konsumsi & Catering',
+                    'Perlengkapan, Sound & Dekorasi',
+                    'Dokumentasi & Media',
+                    'Bisyaroh Penceramah & Pengisi Acara',
+                    'Operasional & Lain-lain'
+                ],
+                datasets: [{
+                    data: [33051500, 31110000, 9300000, 8400000, 300000],
+                    backgroundColor: [
+                        '#e11d48', '#f43f5e', '#fb7185', '#be123c', '#9f1239'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            font: { size: 11, family: "'Plus Jakarta Sans', sans-serif" }
+                        }
+                    }
+                }
+            }
+        });
+
+        const searchInput = document.getElementById('searchInput');
+        const transactionTable = document.getElementById('transactionTable');
+        const rows = transactionTable.querySelectorAll('tbody tr');
+        const noResult = document.getElementById('noResult');
+        let currentFilter = 'all';
+
+        function filterTable() {
+            const query = searchInput.value.toLowerCase();
+            let visibleCount = 0;
+
+            rows.forEach(row => {
+                const type = row.getAttribute('data-type');
+                const searchText = row.getAttribute('data-search');
+                
+                const matchesType = (currentFilter === 'all' || type === currentFilter);
+                const matchesSearch = searchText.includes(query);
+
+                if (matchesType && matchesSearch) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResult.classList.remove('hidden');
+            } else {
+                noResult.classList.add('hidden');
+            }
+        }
+
+        searchInput.addEventListener('input', filterTable);
+
+        function filterType(type) {
+            currentFilter = type;
+            
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-emerald-600', 'text-white', 'active-filter');
+                btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-300');
+            });
+
+            const activeBtn = document.getElementById('btn-' + type.toLowerCase());
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-300');
+                activeBtn.classList.add('bg-emerald-600', 'text-white', 'active-filter');
+            }
+
+            filterTable();
+        }
+    </script>
+</body>
+</html>
